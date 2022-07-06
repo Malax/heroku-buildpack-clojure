@@ -52,5 +52,12 @@ EOF
   for DEB in $(ls -1 $APT_CACHE_DIR/archives/*.deb); do
     dpkg -x $DEB $buildDir/.heroku/apt/
   done
+
+  echo "===================="
+  ls -lah $buildDir/.heroku/apt/usr/bin/google-chrome-stable
+  echo "===================="
+  pwd
+  echo "===================="
+
   chmod +x $buildDir/.heroku/apt/usr/bin/*
 }
