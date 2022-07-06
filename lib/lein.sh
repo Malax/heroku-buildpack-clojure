@@ -25,8 +25,8 @@ install_rlwrap() {
   local buildDir="${1:?}"
   local cacheDir="${2:?}"
 
-  APT_CACHE_DIR="$cacheDir/apt/cache"
-  APT_STATE_DIR="$cacheDir/apt/state"
+  APT_CACHE_DIR="$cacheDir/apt-clojure/cache"
+  APT_STATE_DIR="$cacheDir/apt-clojure/state"
   APT_OPTIONS="-o debug::nolocking=true -o dir::cache=$APT_CACHE_DIR -o dir::state=$APT_STATE_DIR"
 
   mkdir -p "$APT_CACHE_DIR/archives/partial"
@@ -59,5 +59,5 @@ EOF
   pwd
   echo "===================="
 
-  #chmod +x $buildDir/.heroku/apt/usr/bin/*
+  chmod +x $buildDir/.heroku/apt/usr/bin/*
 }
