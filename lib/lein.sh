@@ -59,5 +59,5 @@ EOF
   pwd
   echo "===================="
 
-  chmod +x $buildDir/.heroku/apt/usr/bin/*
+  #chmod +x $buildDir/.heroku/apt/usr/bin/*
 }
